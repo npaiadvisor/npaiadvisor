@@ -1,82 +1,80 @@
+import Image from "next/image"
+import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import Link from "next/link"
-import { Github, Linkedin, Briefcase, Code2, Heart, Music, Trophy } from "lucide-react"
+import { Github, Linkedin } from "lucide-react"
 
 export default function AboutPage() {
   return (
-    <div className="py-24">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl">
-            About Me
-          </h1>
-          <p className="mt-4 text-xl text-zinc-600 dark:text-zinc-400">
-            Building AI automation for nonprofits from Oakville, Ontario
-          </p>
-        </div>
-
-        {/* Background Section */}
-        <section className="mb-12">
-          <Card>
-            <CardHeader>
-              <div className="flex items-center gap-2">
-                <Briefcase className="h-5 w-5 text-zinc-600 dark:text-zinc-400" />
-                <CardTitle className="text-2xl">Background</CardTitle>
-              </div>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-zinc-600 dark:text-zinc-400">
-                I'm Brian Flett, a retired senior director from Bentley Systems where I led software
-                development teams in the energy sector. After stepping away from corporate tech, I've
-                focused my energy on applying AI and automation to help nonprofits work more effectively.
-              </p>
-              <p className="text-zinc-600 dark:text-zinc-400">
-                I volunteer with Management Advisory Services (MAS), a nonprofit
-                consulting organization serving nonprofits in the Greater Toronto Area, and am open to international clients.
-                My focus areas include CiviCRM implementation, AI adoption strategy, and n8n workflow automation.
-              </p>
-              <p className="text-zinc-600 dark:text-zinc-400">
-                Based in Oakville, Ontario, Canada, I'm passionate about using technology to amplify
-                the impact of organizations doing good work in the world.
-              </p>
-            </CardContent>
-          </Card>
+    <div className="py-20">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        {/* Header — photo + intro side by side */}
+        <section className="mb-16 grid items-center gap-12 md:grid-cols-[1fr_1.5fr]">
+          <div>
+            <Image
+              src="/brian-full.jpg"
+              alt="Brian Flett at his desk in Oakville, Ontario"
+              width={600}
+              height={800}
+              priority
+              className="w-full rounded-lg border border-hairline object-cover shadow-sm"
+            />
+          </div>
+          <div>
+            <h1 className="mb-6 text-4xl font-semibold tracking-tight sm:text-5xl">
+              About Brian
+            </h1>
+            <p className="mb-4 text-lg text-muted-foreground">
+              I&rsquo;m a retired senior director from Bentley Systems, where I led
+              software development teams in the energy sector. After stepping away
+              from corporate tech, I focused my energy on applying AI and automation
+              to help nonprofits work more effectively.
+            </p>
+            <p className="mb-4 text-lg text-muted-foreground">
+              I volunteer with Management Advisory Services (MAS), a nonprofit
+              consulting organization serving organizations in the Greater Toronto
+              Area, and am open to international clients. My focus areas include
+              CiviCRM implementation, AI adoption strategy, and n8n workflow
+              automation.
+            </p>
+            <p className="text-lg text-muted-foreground">
+              Based in Oakville, Ontario, Canada.
+            </p>
+          </div>
         </section>
 
-        {/* Technical Focus Section */}
+        {/* Technical Focus */}
         <section className="mb-12">
-          <Card>
+          <Card className="border-hairline">
             <CardHeader>
-              <div className="flex items-center gap-2">
-                <Code2 className="h-5 w-5 text-zinc-600 dark:text-zinc-400" />
-                <CardTitle className="text-2xl">Technical Focus</CardTitle>
-              </div>
+              <CardTitle className="text-2xl">Technical Focus</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid gap-6 md:grid-cols-2">
+              <div className="grid gap-8 md:grid-cols-2">
                 <div>
-                  <h3 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-3">Tools & Platforms</h3>
-                  <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-                    <li>• <strong>n8n</strong> - Self-hosted automation workflows</li>
-                    <li>• <strong>Claude Code</strong> - AI-assisted development</li>
-                    <li>• <strong>CiviCRM</strong> - Nonprofit CRM implementation</li>
-                    <li>• <strong>WordPress</strong> - Website development</li>
-                    <li>• <strong>Next.js</strong> - Modern web applications</li>
-                    <li>• <strong>Vercel</strong> - Application deployment</li>
+                  <h3 className="mb-3 font-sans text-sm font-semibold uppercase tracking-wider text-primary">
+                    Tools & Platforms
+                  </h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li><strong className="text-foreground">n8n</strong> &mdash; self-hosted automation workflows</li>
+                    <li><strong className="text-foreground">Claude Code</strong> &mdash; AI-assisted development</li>
+                    <li><strong className="text-foreground">CiviCRM</strong> &mdash; nonprofit CRM implementation</li>
+                    <li><strong className="text-foreground">WordPress</strong> &mdash; website development</li>
+                    <li><strong className="text-foreground">Next.js</strong> &mdash; modern web applications</li>
+                    <li><strong className="text-foreground">Vercel</strong> &mdash; application deployment</li>
                   </ul>
                 </div>
-
                 <div>
-                  <h3 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-3">Specializations</h3>
-                  <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-                    <li>• Workflow automation with n8n</li>
-                    <li>• AI integration (Claude, OpenAI APIs)</li>
-                    <li>• CiviCRM + AI workflows</li>
-                    <li>• Nonprofit technology strategy</li>
-                    <li>• Data integration & ETL pipelines</li>
-                    <li>• Self-hosted infrastructure</li>
+                  <h3 className="mb-3 font-sans text-sm font-semibold uppercase tracking-wider text-primary">
+                    Specializations
+                  </h3>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>&middot; Workflow automation with n8n</li>
+                    <li>&middot; AI integration (Claude, OpenAI APIs)</li>
+                    <li>&middot; CiviCRM + AI workflows</li>
+                    <li>&middot; Nonprofit technology strategy</li>
+                    <li>&middot; Data integration & ETL pipelines</li>
+                    <li>&middot; Self-hosted infrastructure</li>
                   </ul>
                 </div>
               </div>
@@ -84,23 +82,20 @@ export default function AboutPage() {
           </Card>
         </section>
 
-        {/* Current Work Section */}
+        {/* Current Work */}
         <section className="mb-12">
-          <Card>
+          <Card className="border-hairline">
             <CardHeader>
-              <div className="flex items-center gap-2">
-                <Heart className="h-5 w-5 text-zinc-600 dark:text-zinc-400" />
-                <CardTitle className="text-2xl">Current Work</CardTitle>
-              </div>
+              <CardTitle className="text-2xl">Current Work</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-6">
               <div>
-                <h3 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-2">
+                <h3 className="mb-2 font-sans text-sm font-semibold uppercase tracking-wider text-primary">
                   Management Advisory Services (MAS)
                 </h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-3">
-                  Technology advisor providing CiviCRM implementation, AI strategy, and automation
-                  consulting to nonprofits in the GTA.
+                <p className="mb-3 text-sm text-muted-foreground">
+                  Technology advisor providing CiviCRM implementation, AI strategy,
+                  and automation consulting to nonprofits in the GTA.
                 </p>
                 <a
                   href="https://masadvise.org"
@@ -113,102 +108,92 @@ export default function AboutPage() {
                 </a>
               </div>
 
-              <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800">
-                <h3 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-2">
-                  Allard Prize Automation
+              <div className="border-t border-hairline pt-6">
+                <h3 className="mb-2 font-sans text-sm font-semibold uppercase tracking-wider text-primary">
+                  Allard Prize Donor Outreach
                 </h3>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  Building AI-powered donor outreach automation using n8n, Claude AI, and Google Sheets
-                  to help the Allard Prize team identify and engage potential supporters.
+                <p className="text-sm text-muted-foreground">
+                  Building AI-powered donor outreach automation using n8n, Claude
+                  AI, and Google Sheets to help the Allard Prize team identify and
+                  engage potential supporters.
                 </p>
               </div>
             </CardContent>
           </Card>
         </section>
 
-        {/* Looking For Section */}
+        {/* Looking For */}
         <section className="mb-12">
-          <Card className="bg-zinc-50 dark:bg-zinc-900">
+          <Card className="border-hairline bg-secondary">
             <CardHeader>
-              <CardTitle className="text-2xl">Looking for Tech Peer Collaborators</CardTitle>
+              <CardTitle className="text-2xl">Looking for tech peer collaborators</CardTitle>
               <CardDescription className="text-base">
                 Seeking a few professionals who share my interests
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-zinc-600 dark:text-zinc-400">
-                I'm looking for tech peers who enjoy building with n8n, working with AI/LLMs, and
-                applying technology to nonprofit challenges. Not looking to build a formal community
-                or business—just informal monthly calls to share what we're building and bounce ideas
-                around.
+              <p className="text-muted-foreground">
+                I&rsquo;m looking for tech peers who enjoy building with n8n, working
+                with AI/LLMs, and applying technology to nonprofit challenges. Not
+                looking to build a formal community or business &mdash; just informal
+                monthly calls to share what we&rsquo;re building and bounce ideas around.
               </p>
               <div>
-                <h4 className="font-semibold text-zinc-900 dark:text-zinc-50 mb-2">Interests Include:</h4>
-                <ul className="space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
-                  <li>• n8n and workflow automation tools</li>
-                  <li>• AI/LLMs (Claude, OpenAI, etc.)</li>
-                  <li>• Nonprofit technology and CiviCRM</li>
-                  <li>• Learning while building real projects</li>
-                  <li>• Self-hosted infrastructure</li>
+                <h4 className="mb-2 font-sans text-sm font-semibold uppercase tracking-wider text-primary">
+                  Interests Include
+                </h4>
+                <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>&middot; n8n and workflow automation tools</li>
+                  <li>&middot; AI/LLMs (Claude, OpenAI, etc.)</li>
+                  <li>&middot; Nonprofit technology and CiviCRM</li>
+                  <li>&middot; Learning while building real projects</li>
+                  <li>&middot; Self-hosted infrastructure</li>
                 </ul>
               </div>
             </CardContent>
           </Card>
         </section>
 
-        {/* Outside Interests Section */}
+        {/* Outside Interests */}
         <section className="mb-12">
-          <Card>
+          <Card className="border-hairline">
             <CardHeader>
               <CardTitle className="text-2xl">Outside Interests</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid gap-4 md:grid-cols-3">
-                <div className="flex items-start gap-3">
-                  <Music className="h-5 w-5 text-zinc-600 dark:text-zinc-400 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50">Guitar</h4>
-                    <p className="text-sm text-zinc-600 dark:text-zinc-400">Playing and collecting</p>
-                  </div>
+              <div className="grid gap-6 md:grid-cols-3">
+                <div>
+                  <h4 className="mb-1 font-serif text-lg font-semibold text-primary">Guitar</h4>
+                  <p className="text-sm text-muted-foreground">Playing and collecting</p>
                 </div>
-
-                <div className="flex items-start gap-3">
-                  <Trophy className="h-5 w-5 text-zinc-600 dark:text-zinc-400 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50">Squash</h4>
-                    <p className="text-sm text-zinc-600 dark:text-zinc-400">Staying active</p>
-                  </div>
+                <div>
+                  <h4 className="mb-1 font-serif text-lg font-semibold text-primary">Squash</h4>
+                  <p className="text-sm text-muted-foreground">Staying active</p>
                 </div>
-
-                <div className="flex items-start gap-3">
-                  <Music className="h-5 w-5 text-zinc-600 dark:text-zinc-400 mt-0.5" />
-                  <div>
-                    <h4 className="font-semibold text-zinc-900 dark:text-zinc-50">Live Jazz</h4>
-                    <p className="text-sm text-zinc-600 dark:text-zinc-400">Local shows</p>
-                  </div>
+                <div>
+                  <h4 className="mb-1 font-serif text-lg font-semibold text-primary">Live Jazz</h4>
+                  <p className="text-sm text-muted-foreground">Local shows</p>
                 </div>
               </div>
             </CardContent>
           </Card>
         </section>
 
-        {/* Connect Section */}
+        {/* Connect */}
         <section>
-          <Card>
+          <Card className="border-hairline">
             <CardHeader>
-              <CardTitle className="text-2xl">Let's Connect</CardTitle>
+              <CardTitle className="text-2xl">Let&rsquo;s connect</CardTitle>
               <CardDescription className="text-base">
-                Reach out if you're interested in tech peer collaboration or nonprofit AI automation
+                Reach out if you&rsquo;re interested in tech peer collaboration or
+                nonprofit AI automation.
               </CardDescription>
             </CardHeader>
             <CardContent>
               <div className="flex flex-wrap gap-4">
                 <Link href="/contact">
-                  <Button>
-                    Get in Touch
-                  </Button>
+                  <Button>Get in touch</Button>
                 </Link>
-
                 <a
                   href="https://www.linkedin.com/in/brianflett/"
                   target="_blank"
@@ -219,7 +204,6 @@ export default function AboutPage() {
                     LinkedIn
                   </Button>
                 </a>
-
                 <a
                   href="https://github.com/briangflett"
                   target="_blank"

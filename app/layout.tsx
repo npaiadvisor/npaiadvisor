@@ -19,9 +19,9 @@ const plexSans = IBM_Plex_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "NPAIAdvisor — Building AI Automation for Nonprofits",
+  title: "NPAIAdvisor — AI Agents for Nonprofits",
   description:
-    "Brian Flett's portfolio of nonprofit AI automation projects and tech peer collaboration network.",
+    "Brian Flett's practice building practical AI agents with small to mid sized nonprofits.",
 };
 
 export default function RootLayout({

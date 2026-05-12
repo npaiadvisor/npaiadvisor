@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -9,12 +10,22 @@ export default function Home() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="mb-20 text-center">
+          <div className="mb-8 flex justify-center">
+            <Image
+              src="/brian-headshot.jpg"
+              alt="Brian Flett"
+              width={120}
+              height={120}
+              priority
+              className="h-28 w-28 rounded-full object-cover ring-1 ring-hairline sm:h-32 sm:w-32"
+            />
+          </div>
           <h1 className="mb-6 text-4xl font-semibold tracking-tight sm:text-6xl">
-            AI Automation for Nonprofits
+            AI Agents for Nonprofits
           </h1>
           <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
-            Practical AI workflow automation built with{" "}
-            <span className="text-ochre italic">small nonprofits</span>{" "}
+            Practical AI agents built with{" "}
+            <span className="text-ochre italic">small to mid sized nonprofits</span>{" "}
             to amplify the work they were always going to do anyway.
           </p>
         </div>
@@ -26,7 +37,7 @@ export default function Home() {
               <CardHeader>
                 <CardTitle className="text-2xl">For Nonprofits</CardTitle>
                 <CardDescription className="text-base">
-                  What AI automation can do for your organization &mdash; and what it can&rsquo;t.
+                  What AI agents can do for your organization &mdash; and what they can&rsquo;t.
                 </CardDescription>
               </CardHeader>
               <CardContent>

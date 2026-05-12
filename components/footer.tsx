@@ -86,7 +86,7 @@ export function Footer() {
 
         <div className="mt-12 border-t border-hairline pt-8">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} Brian Flett. Building AI automation
+            &copy; {new Date().getFullYear()} Brian Flett. Practical AI agents
             for nonprofits.
           </p>
         </div>
