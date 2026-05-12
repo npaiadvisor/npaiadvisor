@@ -1,38 +1,43 @@
 import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Users, Code2, Lightbulb, Calendar, Github, Linkedin, ArrowRight } from "lucide-react"
+import { Github, Linkedin, ArrowRight } from "lucide-react"
 
 export default function AIEngineersPage() {
   return (
-    <div className="py-24">
+    <div className="py-20">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         {/* Hero */}
         <div className="mb-16 text-center">
-          <Users className="mx-auto h-12 w-12 text-zinc-600 dark:text-zinc-400 mb-4" />
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl mb-6">
+          <h1 className="mb-6 text-4xl font-semibold tracking-tight sm:text-5xl">
             Looking for AI Engineer Collaborators
           </h1>
-          <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-2xl mx-auto">
-            Seeking a few tech professionals who enjoy building with n8n, working with AI/LLMs,
-            and applying technology to nonprofit challenges
+          <p className="mx-auto max-w-2xl text-xl text-muted-foreground">
+            A small, informal circle of tech professionals building{" "}
+            <span className="italic text-ochre">agents and automations</span>{" "}
+            for nonprofits.
           </p>
         </div>
 
         {/* What This Is */}
         <section className="mb-16">
-          <Card>
+          <Card className="border-hairline">
             <CardHeader>
-              <CardTitle className="text-2xl">What I'm Looking For</CardTitle>
+              <CardTitle className="text-2xl">What I&rsquo;m looking for</CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-zinc-600 dark:text-zinc-400">
-                I'm building AI automation solutions for nonprofits and want to connect with
-                like-minded tech professionals for informal knowledge sharing and collaboration.
+            <CardContent className="space-y-4 text-muted-foreground">
+              <p>
+                I build AI agents and automations with nonprofits &mdash; some of the
+                work is full-blown agentic (Claude Code, MCP, persistent memory, tool
+                use), some is classic workflow automation (n8n, scheduled tasks, glue
+                code). Both are legitimate, and most real engagements involve some of
+                each.
               </p>
-              <p className="text-zinc-600 dark:text-zinc-400">
-                Not a formal community, not a business network, not a side project commitment.
-                Just a few people who enjoy this kind of work and want to share what we're learning.
+              <p>
+                I&rsquo;m looking for a few peers who enjoy this kind of building &mdash;
+                whether you identify as an agent developer, an n8n hacker, an
+                automation engineer, or somewhere in between. Informal, async-first,
+                periodic video calls, no formal commitment.
               </p>
             </CardContent>
           </Card>
@@ -41,56 +46,53 @@ export default function AIEngineersPage() {
         {/* Three Columns */}
         <section className="mb-16">
           <div className="grid gap-6 md:grid-cols-3">
-            <Card>
+            <Card className="border-hairline">
               <CardHeader>
-                <div className="flex items-center gap-2">
-                  <Calendar className="h-5 w-5 text-zinc-600 dark:text-zinc-400" />
-                  <CardTitle className="text-lg">What We'll Do</CardTitle>
-                </div>
+                <h3 className="font-sans text-xs font-semibold uppercase tracking-wider text-ochre">
+                  What we&rsquo;ll do
+                </h3>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-                  <li>• Regular async collaboration</li>
-                  <li>• Periodic video calls</li>
-                  <li>• Share what we're building</li>
-                  <li>• Bounce ideas off each other</li>
-                  <li>• Learn together</li>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>&middot; Async collaboration</li>
+                  <li>&middot; Periodic video calls</li>
+                  <li>&middot; Share what we&rsquo;re building</li>
+                  <li>&middot; Bounce ideas off each other</li>
+                  <li>&middot; Learn together</li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="border-hairline">
               <CardHeader>
-                <div className="flex items-center gap-2">
-                  <Code2 className="h-5 w-5 text-zinc-600 dark:text-zinc-400" />
-                  <CardTitle className="text-lg">Tech I Use</CardTitle>
-                </div>
+                <h3 className="font-sans text-xs font-semibold uppercase tracking-wider text-ochre">
+                  Tech I use
+                </h3>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-                  <li>• n8n (self-hosted automation)</li>
-                  <li>• Claude Code & AI tools</li>
-                  <li>• CiviCRM + WordPress</li>
-                  <li>• Next.js + Vercel</li>
-                  <li>• Self-hosted infrastructure</li>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>&middot; Claude Code, MCP, Claude Agent SDK</li>
+                  <li>&middot; n8n (self-hosted)</li>
+                  <li>&middot; Next.js + Vercel + Postgres</li>
+                  <li>&middot; CiviCRM + WordPress</li>
+                  <li>&middot; Self-hosted infra</li>
                 </ul>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="border-hairline">
               <CardHeader>
-                <div className="flex items-center gap-2">
-                  <Lightbulb className="h-5 w-5 text-zinc-600 dark:text-zinc-400" />
-                  <CardTitle className="text-lg">What This Isn't</CardTitle>
-                </div>
+                <h3 className="font-sans text-xs font-semibold uppercase tracking-wider text-ochre">
+                  What this isn&rsquo;t
+                </h3>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-2 text-sm text-zinc-600 dark:text-zinc-400">
-                  <li>• Not a formal commitment</li>
-                  <li>• Not community management</li>
-                  <li>• Not a service business</li>
-                  <li>• Not a mentorship program</li>
-                  <li>• Just peer learning</li>
+                <ul className="space-y-2 text-sm text-muted-foreground">
+                  <li>&middot; Not a formal commitment</li>
+                  <li>&middot; Not community management</li>
+                  <li>&middot; Not a service business</li>
+                  <li>&middot; Not a mentorship program</li>
+                  <li>&middot; Just peer learning</li>
                 </ul>
               </CardContent>
             </Card>
@@ -99,55 +101,77 @@ export default function AIEngineersPage() {
 
         {/* Current Work */}
         <section className="mb-16">
-          <h2 className="text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 mb-8">
-            What I'm Working On
+          <h2 className="mb-8 text-3xl font-semibold tracking-tight">
+            What I&rsquo;m working on
           </h2>
 
           <div className="space-y-6">
-            <Card>
+            <Card className="border-hairline">
               <CardHeader>
-                <CardTitle className="text-xl">Allard Prize Donor Outreach Automation</CardTitle>
+                <CardTitle className="text-xl">Allard Prize donor outreach agent</CardTitle>
                 <CardDescription>
-                  AI-powered workflow for monitoring prospects and generating outreach
+                  AI agent that monitors prospects and surfaces only the moments worth acting on.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">
-                  Built with n8n, Claude AI, and SendGrid. Monitors 50+ RSS feeds daily,
-                  scrapes LinkedIn, analyzes relevance with AI, and generates personalized touchpoint
-                  recommendations. Fully automated pipeline from data collection to Google Sheets tracking.
+                <p className="mb-4 text-sm text-muted-foreground">
+                  Built on n8n with Claude as the relevance-scoring brain. Watches 50+
+                  RSS feeds daily, scrapes LinkedIn activity, scores entries against
+                  the foundation&rsquo;s criteria, drafts personalised outreach
+                  recommendations. Currently being productionalised to Next.js +
+                  Postgres + Vercel for handoff to client infrastructure.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200">
+                <div className="mb-4 flex flex-wrap gap-2">
+                  <span className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
                     n8n
                   </span>
-                  <span className="inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200">
-                    Claude AI
+                  <span className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
+                    Claude
                   </span>
-                  <span className="inline-flex items-center rounded-full bg-zinc-100 px-3 py-1 text-xs font-medium text-zinc-800 dark:bg-zinc-800 dark:text-zinc-200">
-                    Google Sheets
+                  <span className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
+                    Next.js
+                  </span>
+                  <span className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground">
+                    Postgres
                   </span>
                 </div>
                 <Link href="/projects/allard-prize">
                   <Button variant="outline" size="sm">
-                    View Case Study
+                    View case study
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </Link>
               </CardContent>
             </Card>
 
-            <Card>
+            <Card className="border-hairline">
               <CardHeader>
-                <CardTitle className="text-xl">MAS Nonprofit Consulting</CardTitle>
+                <CardTitle className="text-xl">Klaus personal AI assistant</CardTitle>
                 <CardDescription>
-                  Technology advisor for Management Advisory Services
+                  A full agent with persistent memory, sitting on top of my tools.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  I volunteer with MAS, focusing on CiviCRM implementation, AI adoption
-                  strategy, and n8n workflow automation for nonprofits in the Greater Toronto Area.
+                <p className="text-sm text-muted-foreground">
+                  Claude Code + a constellation of n8n workflows, MCP servers, and
+                  Postgres-backed memory. The kind of thing I&rsquo;d like to help every
+                  nonprofit lead end up with for their own work.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-hairline">
+              <CardHeader>
+                <CardTitle className="text-xl">MAS volunteer consulting</CardTitle>
+                <CardDescription>
+                  Technology advisor for Management Advisory Services.
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-muted-foreground">
+                  I volunteer with MAS on CiviCRM implementation, AI adoption
+                  strategy, agent prototyping, and n8n workflow work for nonprofits
+                  in the Greater Toronto Area.
                 </p>
               </CardContent>
             </Card>
@@ -156,18 +180,19 @@ export default function AIEngineersPage() {
 
         {/* Ideal Collaborator */}
         <section className="mb-16">
-          <Card className="bg-gradient-to-br from-zinc-50 to-white dark:from-zinc-900 dark:to-zinc-950">
+          <Card className="border-hairline bg-secondary">
             <CardHeader>
-              <CardTitle className="text-2xl">You Might Be a Good Fit If...</CardTitle>
+              <CardTitle className="text-2xl">You might be a good fit if&hellip;</CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3 text-zinc-600 dark:text-zinc-400">
-                <li>• You enjoy building with n8n or similar automation tools</li>
-                <li>• You're exploring AI/LLMs (Claude, OpenAI, etc.) in practical projects</li>
-                <li>• You care about nonprofit technology and social impact</li>
-                <li>• You prefer learning by building rather than theory</li>
-                <li>• You want peer collaboration, not formal networking</li>
-                <li>• You're comfortable with self-hosted infrastructure</li>
+              <ul className="space-y-3 text-muted-foreground">
+                <li>&middot; You build AI agents (Claude Code, MCP, OpenAI Agents SDK, LangGraph &mdash; whatever)</li>
+                <li>&middot; You build workflow automations (n8n, Zapier, Temporal, hand-rolled)</li>
+                <li>&middot; You&rsquo;re moving from one to the other and want a sounding board</li>
+                <li>&middot; You care about nonprofit technology and social impact</li>
+                <li>&middot; You prefer learning by building over theorising</li>
+                <li>&middot; You want peer exchange, not formal networking</li>
+                <li>&middot; You&rsquo;re comfortable with self-hosted infrastructure</li>
               </ul>
             </CardContent>
           </Card>
@@ -175,21 +200,18 @@ export default function AIEngineersPage() {
 
         {/* Connect */}
         <section className="mb-16">
-          <Card>
+          <Card className="border-hairline">
             <CardHeader>
-              <CardTitle className="text-2xl">Let's Connect</CardTitle>
+              <CardTitle className="text-2xl">Let&rsquo;s connect</CardTitle>
               <CardDescription className="text-base">
-                Reach out if you're interested in informal AI Engineer collaboration
+                Reach out if you&rsquo;re interested in informal AI engineer collaboration.
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="flex flex-wrap gap-4 mb-6">
+              <div className="mb-6 flex flex-wrap gap-3">
                 <Link href="/contact?type=ai-engineer">
-                  <Button>
-                    Get in Touch
-                  </Button>
+                  <Button>Get in touch</Button>
                 </Link>
-
                 <a
                   href="https://www.linkedin.com/in/brianflett/"
                   target="_blank"
@@ -200,7 +222,6 @@ export default function AIEngineersPage() {
                     LinkedIn
                   </Button>
                 </a>
-
                 <a
                   href="https://github.com/briangflett"
                   target="_blank"
@@ -213,16 +234,17 @@ export default function AIEngineersPage() {
                 </a>
               </div>
 
-              <div className="pt-4 border-t border-zinc-200 dark:border-zinc-800">
-                <p className="text-sm text-zinc-600 dark:text-zinc-400">
-                  <strong>Note:</strong> I'm specifically looking for a few people for regular collaboration.
-                  If you're just curious about my work, check out the{" "}
-                  <Link href="/projects" className="text-zinc-900 hover:underline dark:text-zinc-50">
+              <div className="border-t border-hairline pt-4">
+                <p className="text-sm text-muted-foreground">
+                  <strong className="text-foreground">Note:</strong> I&rsquo;m looking for
+                  a few people for regular collaboration. If you&rsquo;re just curious
+                  about the work, check out the{" "}
+                  <Link href="/projects" className="text-primary hover:underline">
                     projects page
                   </Link>{" "}
                   or{" "}
-                  <Link href="/about" className="text-zinc-900 hover:underline dark:text-zinc-50">
-                    learn more about me
+                  <Link href="/about" className="text-primary hover:underline">
+                    learn more about Brian
                   </Link>
                   .
                 </p>
@@ -233,13 +255,11 @@ export default function AIEngineersPage() {
 
         {/* About Me Quick Link */}
         <section className="text-center">
-          <p className="text-zinc-600 dark:text-zinc-400 mb-4">
+          <p className="mb-4 text-muted-foreground">
             Want to learn more about my background first?
           </p>
           <Link href="/about">
-            <Button variant="outline">
-              About Brian
-            </Button>
+            <Button variant="outline">About Brian</Button>
           </Link>
         </section>
       </div>
