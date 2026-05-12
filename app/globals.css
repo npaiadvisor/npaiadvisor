@@ -6,8 +6,19 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-plex-sans);
+  --font-serif: var(--font-source-serif);
   --font-mono: var(--font-geist-mono);
+
+  /* Brand semantic colors (npaiadvisor + MAS AI content) */
+  --color-canvas: #FAF8F5;
+  --color-navy: #092B53;
+  --color-ochre: #B8902C;
+  --color-body: #3A3A3A;
+  --color-subtle: #5A6271;
+  --color-disc: #EFECE7;
+  --color-hairline: #E5E0D9;
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -48,71 +59,74 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  /* Brand spine: cream canvas, navy anchor, ochre accent */
+  --background: #FAF8F5;
+  --foreground: #3A3A3A;
+  --card: #FFFFFF;
+  --card-foreground: #3A3A3A;
+  --popover: #FFFFFF;
+  --popover-foreground: #3A3A3A;
+  --primary: #092B53;
+  --primary-foreground: #FAF8F5;
+  --secondary: #EFECE7;
+  --secondary-foreground: #092B53;
+  --muted: #EFECE7;
+  --muted-foreground: #5A6271;
+  --accent: #B8902C;
+  --accent-foreground: #FAF8F5;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: #E5E0D9;
+  --input: #E5E0D9;
+  --ring: #B8902C;
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --sidebar: #FAF8F5;
+  --sidebar-foreground: #3A3A3A;
+  --sidebar-primary: #092B53;
+  --sidebar-primary-foreground: #FAF8F5;
+  --sidebar-accent: #EFECE7;
+  --sidebar-accent-foreground: #092B53;
+  --sidebar-border: #E5E0D9;
+  --sidebar-ring: #B8902C;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  /* Inverted brand: navy canvas + cream text. The site's primary expression is
+     light mode; dark mode is supported for user system preference but kept on-brand. */
+  --background: #092B53;
+  --foreground: #FAF8F5;
+  --card: #0F3866;
+  --card-foreground: #FAF8F5;
+  --popover: #0F3866;
+  --popover-foreground: #FAF8F5;
+  --primary: #FAF8F5;
+  --primary-foreground: #092B53;
+  --secondary: #0F3866;
+  --secondary-foreground: #FAF8F5;
+  --muted: #0F3866;
+  --muted-foreground: #C4C5C8;
+  --accent: #B8902C;
+  --accent-foreground: #092B53;
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
+  --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --ring: #B8902C;
   --chart-1: oklch(0.488 0.243 264.376);
   --chart-2: oklch(0.696 0.17 162.48);
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --sidebar: #092B53;
+  --sidebar-foreground: #FAF8F5;
+  --sidebar-primary: #FAF8F5;
+  --sidebar-primary-foreground: #092B53;
+  --sidebar-accent: #0F3866;
+  --sidebar-accent-foreground: #FAF8F5;
+  --sidebar-border: oklch(1 0 0 / 12%);
+  --sidebar-ring: #B8902C;
 }
 
 @layer base {
@@ -121,5 +135,10 @@
   }
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-plex-sans), system-ui, sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-source-serif), Georgia, serif;
+    color: var(--primary);
   }
 }

@@ -1,21 +1,21 @@
 import Link from "next/link"
-import { Github, Linkedin, MessageSquare } from "lucide-react"
 
 export function Footer() {
   return (
-    <footer className="border-t border-zinc-200 dark:border-zinc-800">
+    <footer className="border-t border-hairline bg-background">
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
-            <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">Connect</h3>
-            <ul className="mt-4 space-y-3">
+            <h3 className="font-sans text-sm font-semibold uppercase tracking-wider text-primary">
+              Connect
+            </h3>
+            <ul className="mt-4 space-y-3 text-sm">
               <li>
                 <Link
                   href="/contact"
-                  className="flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                  className="text-muted-foreground hover:text-primary"
                 >
-                  <MessageSquare className="h-4 w-4" />
-                  Contact Form
+                  Contact form
                 </Link>
               </li>
               <li>
@@ -23,9 +23,8 @@ export function Footer() {
                   href="https://www.linkedin.com/in/brianflett/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                  className="text-muted-foreground hover:text-primary"
                 >
-                  <Linkedin className="h-4 w-4" />
                   LinkedIn
                 </a>
               </li>
@@ -34,9 +33,8 @@ export function Footer() {
                   href="https://github.com/briangflett"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                  className="text-muted-foreground hover:text-primary"
                 >
-                  <Github className="h-4 w-4" />
                   GitHub
                 </a>
               </li>
@@ -44,23 +42,40 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">Projects</h3>
-            <ul className="mt-4 space-y-3">
+            <h3 className="font-sans text-sm font-semibold uppercase tracking-wider text-primary">
+              Work
+            </h3>
+            <ul className="mt-4 space-y-3 text-sm">
               <li>
-                  Coming Soon
+                <Link
+                  href="/projects"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  Projects
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/mas-ai"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  MAS AI for Nonprofits
+                </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50">Organizations</h3>
-            <ul className="mt-4 space-y-3">
+            <h3 className="font-sans text-sm font-semibold uppercase tracking-wider text-primary">
+              Organizations
+            </h3>
+            <ul className="mt-4 space-y-3 text-sm">
               <li>
                 <a
                   href="https://masadvise.org"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"
+                  className="text-muted-foreground hover:text-primary"
                 >
                   Management Advisory Services
                 </a>
@@ -69,9 +84,10 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 border-t border-zinc-200 pt-8 dark:border-zinc-800">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400">
-            © {new Date().getFullYear()} Brian Flett. Building AI automation for nonprofits.
+        <div className="mt-12 border-t border-hairline pt-8">
+          <p className="text-sm text-muted-foreground">
+            &copy; {new Date().getFullYear()} Brian Flett. Building AI automation
+            for nonprofits.
           </p>
         </div>
       </div>
