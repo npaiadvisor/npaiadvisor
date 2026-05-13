@@ -197,7 +197,7 @@ export default function AboutPage() {
                   <Button>Get in touch</Button>
                 </Link>
                 <a
-                  href="https://www.linkedin.com/in/brianflett-2a43691/"
+                  href="https://ca.linkedin.com/in/brian-flett-2a43691"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
