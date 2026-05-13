@@ -83,63 +83,73 @@ export default function ProjectsPage() {
         {/* More Projects */}
         <section>
           <h2 className="mb-6 text-2xl font-semibold tracking-tight">
-            More projects in flight
+            More case studies
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <Card className="border-hairline">
-              <CardHeader>
-                <CardTitle className="text-lg">MAS VC Chatbot</CardTitle>
-                <CardDescription>
-                  An agent as a research partner grounded in MAS knowledge.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <p className="text-sm text-muted-foreground">
-                  A hundred volunteer consultants at Management Advisory Services
-                  get a lookup partner scoped to who they are and what MAS actually
-                  knows &mdash; grounded in MAS&rsquo;s own documents and data, so
-                  every answer is sourced and nothing is made up.
-                </p>
-                <div className="flex flex-wrap gap-2 pt-1">
-                  {["n8n", "Claude", "pgvector", "WordPress"].map((t) => (
-                    <span
-                      key={t}
-                      className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <Link href="/projects/mas-vc-chatbot" className="group">
+              <Card className="h-full border-hairline transition-shadow hover:shadow-md">
+                <CardHeader>
+                  <CardTitle className="text-lg">MAS VC Chatbot</CardTitle>
+                  <CardDescription>
+                    An agent as a research partner grounded in MAS knowledge.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <p className="text-sm text-muted-foreground">
+                    A hundred volunteer consultants at Management Advisory Services
+                    get a lookup partner scoped to who they are and what MAS actually
+                    knows &mdash; grounded in MAS&rsquo;s own documents and data, so
+                    every answer is sourced and nothing is made up.
+                  </p>
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {["n8n", "Claude", "pgvector", "WordPress"].map((t) => (
+                      <span
+                        key={t}
+                        className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="pt-2 text-sm font-medium text-primary group-hover:underline">
+                    Read the case study <ArrowRight className="ml-1 inline h-3 w-3" />
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="border-hairline">
-              <CardHeader>
-                <CardTitle className="text-lg">Klaus Personal Assistant</CardTitle>
-                <CardDescription>
-                  An agent as a thin layer on top of your tools, with persistent memory.
-                </CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-3">
-                <p className="text-sm text-muted-foreground">
-                  A personal AI assistant that remembers across projects, files, and
-                  schedule &mdash; sitting on top of the tools you already use rather
-                  than replacing them. The pattern any nonprofit can adapt for an ED,
-                  a fundraising lead, or a program manager.
-                </p>
-                <div className="flex flex-wrap gap-2 pt-1">
-                  {["Claude Code", "MCP", "n8n", "Postgres", "Next.js"].map((t) => (
-                    <span
-                      key={t}
-                      className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
+            <Link href="/projects/klaus-personal-assistant" className="group">
+              <Card className="h-full border-hairline transition-shadow hover:shadow-md">
+                <CardHeader>
+                  <CardTitle className="text-lg">Klaus Personal Assistant</CardTitle>
+                  <CardDescription>
+                    An agent as a thin layer on top of your tools, with persistent memory.
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-3">
+                  <p className="text-sm text-muted-foreground">
+                    A personal AI assistant that remembers across projects, files, and
+                    schedule &mdash; sitting on top of the tools you already use rather
+                    than replacing them. The pattern any nonprofit can adapt for an ED,
+                    a fundraising lead, or a program manager.
+                  </p>
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    {["Claude Code", "MCP", "n8n", "Postgres", "Next.js"].map((t) => (
+                      <span
+                        key={t}
+                        className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <p className="pt-2 text-sm font-medium text-primary group-hover:underline">
+                    Read the case study <ArrowRight className="ml-1 inline h-3 w-3" />
+                  </p>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </section>
       </div>
