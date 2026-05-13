@@ -1,13 +1,19 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Suspense } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
+import { MasOriginBanner } from "@/components/mas-origin-banner"
 import { ArrowLeft, ArrowRight, ExternalLink } from "lucide-react"
 
 export default function AllardPrizePage() {
   return (
-    <div className="py-20">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <>
+      <Suspense fallback={null}>
+        <MasOriginBanner />
+      </Suspense>
+      <div className="py-20">
+        <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <Link
           href="/projects"
           className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary"
@@ -378,7 +384,8 @@ export default function AllardPrizePage() {
             <Button size="lg">Discuss a similar project</Button>
           </Link>
         </div>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
