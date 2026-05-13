@@ -80,34 +80,64 @@ export default function ProjectsPage() {
           </Card>
         </section>
 
-        {/* Future Projects */}
+        {/* More Projects */}
         <section>
           <h2 className="mb-6 text-2xl font-semibold tracking-tight">
             More projects in flight
           </h2>
 
           <div className="grid gap-6 md:grid-cols-2">
-            <Card className="border-dashed border-hairline">
+            <Card className="border-hairline">
               <CardHeader>
-                <CardTitle className="text-lg">CiviCRM AI integration</CardTitle>
+                <CardTitle className="text-lg">MAS VC Chatbot</CardTitle>
                 <CardDescription>
-                  AI-powered donor insights and automated communication workflows for CiviCRM-based nonprofits.
+                  An agent as a research partner grounded in MAS knowledge.
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">Planning phase</p>
+              <CardContent className="space-y-3">
+                <p className="text-sm text-muted-foreground">
+                  A hundred volunteer consultants at Management Advisory Services
+                  get a lookup partner scoped to who they are and what MAS actually
+                  knows &mdash; grounded in MAS&rsquo;s own documents and data, so
+                  every answer is sourced and nothing is made up.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {["n8n", "Claude", "pgvector", "WordPress"].map((t) => (
+                    <span
+                      key={t}
+                      className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="border-dashed border-hairline">
+            <Card className="border-hairline">
               <CardHeader>
-                <CardTitle className="text-lg">Nonprofit AI assessment</CardTitle>
+                <CardTitle className="text-lg">Klaus Personal Assistant</CardTitle>
                 <CardDescription>
-                  An agent that helps small to mid sized nonprofits identify where AI would actually fit in their work.
+                  An agent as a thin layer on top of your tools, with persistent memory.
                 </CardDescription>
               </CardHeader>
-              <CardContent>
-                <p className="text-sm text-muted-foreground">Planning phase</p>
+              <CardContent className="space-y-3">
+                <p className="text-sm text-muted-foreground">
+                  A personal AI assistant that remembers across projects, files, and
+                  schedule &mdash; sitting on top of the tools you already use rather
+                  than replacing them. The pattern any nonprofit can adapt for an ED,
+                  a fundraising lead, or a program manager.
+                </p>
+                <div className="flex flex-wrap gap-2 pt-1">
+                  {["Claude Code", "MCP", "n8n", "Postgres", "Next.js"].map((t) => (
+                    <span
+                      key={t}
+                      className="inline-flex items-center rounded-full bg-secondary px-3 py-1 text-xs font-medium text-secondary-foreground"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </CardContent>
             </Card>
           </div>
