@@ -1,67 +1,74 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Building2, Users, ArrowRight } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export default function Home() {
   return (
     <div className="flex min-h-[calc(100vh-8rem)] flex-col items-center justify-center py-24">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-6xl mb-6">
-            AI Automation for Nonprofits
+        <div className="mb-20 text-center">
+          <div className="mb-8 flex justify-center">
+            <Image
+              src="/brian-headshot.jpg"
+              alt="Brian Flett"
+              width={120}
+              height={120}
+              priority
+              className="h-28 w-28 rounded-full object-cover ring-1 ring-hairline sm:h-32 sm:w-32"
+            />
+          </div>
+          <h1 className="mb-6 text-4xl font-semibold tracking-tight sm:text-6xl">
+            AI Agents for Nonprofits
           </h1>
-          <p className="text-xl text-zinc-600 dark:text-zinc-400 max-w-3xl mx-auto">
-            Helping nonprofits amplify their mission through practical AI workflow automation
+          <p className="mx-auto max-w-3xl text-xl text-muted-foreground">
+            Practical AI agents built with{" "}
+            <span className="text-ochre italic">small to mid sized nonprofits</span>{" "}
+            to amplify the work they were always going to do anyway.
           </p>
         </div>
 
         {/* Two-Choice Cards */}
-        <div className="grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-          <Link href="/nonprofits">
-            <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
+        <div className="mx-auto grid max-w-4xl gap-8 md:grid-cols-2">
+          <Link href="/nonprofits" className="group">
+            <Card className="h-full border-hairline bg-card transition-shadow hover:shadow-md">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <Building2 className="h-8 w-8 text-zinc-600 dark:text-zinc-400" />
-                  <CardTitle className="text-2xl">For Nonprofits</CardTitle>
-                </div>
+                <CardTitle className="text-2xl">For Nonprofits</CardTitle>
                 <CardDescription className="text-base">
-                  Learn how AI automation can streamline your operations and amplify your impact
+                  What AI agents can do for your organization &mdash; and what they can&rsquo;t.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3 text-sm text-zinc-600 dark:text-zinc-400 mb-6">
-                  <li>• Understand what AI can do for your organization</li>
-                  <li>• See real examples of nonprofit automation</li>
-                  <li>• Learn about safe AI adoption strategies</li>
-                  <li>• Explore practical use cases</li>
+                <ul className="mb-8 space-y-2 text-sm text-muted-foreground">
+                  <li>&middot; What AI can actually do for nonprofits</li>
+                  <li>&middot; Real examples from real engagements</li>
+                  <li>&middot; Honest framing of cost, time, and limits</li>
+                  <li>&middot; Practical entry points by use case</li>
                 </ul>
                 <Button className="w-full">
-                  Explore for Nonprofits
+                  For Nonprofits
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </CardContent>
             </Card>
           </Link>
 
-          <Link href="/ai-engineers">
-            <Card className="h-full hover:shadow-lg transition-shadow cursor-pointer">
+          <Link href="/ai-engineers" className="group">
+            <Card className="h-full border-hairline bg-card transition-shadow hover:shadow-md">
               <CardHeader>
-                <div className="flex items-center gap-3 mb-2">
-                  <Users className="h-8 w-8 text-zinc-600 dark:text-zinc-400" />
-                  <CardTitle className="text-2xl">For AI Engineers</CardTitle>
-                </div>
+                <CardTitle className="text-2xl">For AI Engineers</CardTitle>
                 <CardDescription className="text-base">
-                  Join a small network of tech professionals building AI automation for nonprofits
+                  A small network of tech professionals building AI automation for nonprofits.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-3 text-sm text-zinc-600 dark:text-zinc-400 mb-6">
-                  <li>• Collaborate with like-minded AI Engineers</li>
-                  <li>• Share n8n and AI automation projects</li>
-                  <li>• Learn while building real solutions</li>
-                  <li>• Informal monthly knowledge sharing</li>
+                <ul className="mb-8 space-y-2 text-sm text-muted-foreground">
+                  <li>&middot; Collaborate with peers building similar things</li>
+                  <li>&middot; Share AI agent and n8n automation patterns</li>
+                  <li>&middot; Learn while building real solutions</li>
+                  <li>&middot; Informal monthly knowledge sharing</li>
                 </ul>
                 <Button variant="outline" className="w-full">
                   Join the Network
@@ -73,16 +80,23 @@ export default function Home() {
         </div>
 
         {/* Quick Links */}
-        <div className="mt-16 text-center">
-          <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-4">
-            Or explore directly:
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+        <div className="mt-20 text-center">
+          <p className="mb-4 text-sm text-muted-foreground">Or explore directly:</p>
+          <div className="flex flex-wrap justify-center gap-2">
             <Link href="/projects">
-              <Button variant="ghost" size="sm">View Projects</Button>
+              <Button variant="ghost" size="sm">
+                Projects
+              </Button>
             </Link>
             <Link href="/about">
-              <Button variant="ghost" size="sm">About Brian</Button>
+              <Button variant="ghost" size="sm">
+                About Brian
+              </Button>
+            </Link>
+            <Link href="/mas-ai">
+              <Button variant="ghost" size="sm">
+                MAS AI
+              </Button>
             </Link>
           </div>
         </div>
