@@ -213,7 +213,7 @@ export default function AIEngineersPage() {
                   <Button>Get in touch</Button>
                 </Link>
                 <a
-                  href="https://www.linkedin.com/in/brianflett/"
+                  href="https://www.linkedin.com/in/brianflett-2a43691/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

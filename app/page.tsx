@@ -66,7 +66,7 @@ export default function Home() {
               <CardContent>
                 <ul className="mb-8 space-y-2 text-sm text-muted-foreground">
                   <li>&middot; Collaborate with peers building similar things</li>
-                  <li>&middot; Share n8n + AI automation patterns</li>
+                  <li>&middot; Share AI agent and n8n automation patterns</li>
                   <li>&middot; Learn while building real solutions</li>
                   <li>&middot; Informal monthly knowledge sharing</li>
                 </ul>

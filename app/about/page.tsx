@@ -34,8 +34,8 @@ export default function AboutPage() {
               I volunteer with Management Advisory Services (MAS), a nonprofit
               consulting organization serving organizations in the Greater Toronto
               Area, and am open to international clients. My focus areas include
-              CiviCRM implementation, AI adoption strategy, and n8n workflow
-              automation.
+              CiviCRM implementation, AI adoption strategy, n8n workflow
+              automation, and AI agent development.
             </p>
             <p className="text-lg text-muted-foreground">
               Based in Oakville, Ontario, Canada.
@@ -56,8 +56,8 @@ export default function AboutPage() {
                     Tools & Platforms
                   </h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li><strong className="text-foreground">n8n</strong> &mdash; self-hosted automation workflows</li>
                     <li><strong className="text-foreground">Claude Code</strong> &mdash; AI-assisted development</li>
+                    <li><strong className="text-foreground">n8n</strong> &mdash; self-hosted automation workflows</li>
                     <li><strong className="text-foreground">CiviCRM</strong> &mdash; nonprofit CRM implementation</li>
                     <li><strong className="text-foreground">WordPress</strong> &mdash; website development</li>
                     <li><strong className="text-foreground">Next.js</strong> &mdash; modern web applications</li>
@@ -69,12 +69,13 @@ export default function AboutPage() {
                     Specializations
                   </h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li>&middot; AI agents</li>
                     <li>&middot; Workflow automation with n8n</li>
                     <li>&middot; AI integration (Claude, OpenAI APIs)</li>
                     <li>&middot; CiviCRM + AI workflows</li>
                     <li>&middot; Nonprofit technology strategy</li>
                     <li>&middot; Data integration & ETL pipelines</li>
-                    <li>&middot; Self-hosted infrastructure</li>
+
                   </ul>
                 </div>
               </div>
@@ -133,8 +134,8 @@ export default function AboutPage() {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                I&rsquo;m looking for tech peers who enjoy building with n8n, working
-                with AI/LLMs, and applying technology to nonprofit challenges. Not
+                I&rsquo;m looking for tech peers who enjoy building AI agents,  
+                working with n8n and AI/LLMs, and applying technology to nonprofit challenges. Not
                 looking to build a formal community or business &mdash; just informal
                 monthly calls to share what we&rsquo;re building and bounce ideas around.
               </p>
@@ -143,11 +144,12 @@ export default function AboutPage() {
                   Interests Include
                 </h4>
                 <ul className="space-y-1 text-sm text-muted-foreground">
+                  <li>&middot; AI agents</li>
                   <li>&middot; n8n and workflow automation tools</li>
                   <li>&middot; AI/LLMs (Claude, OpenAI, etc.)</li>
                   <li>&middot; Nonprofit technology and CiviCRM</li>
                   <li>&middot; Learning while building real projects</li>
-                  <li>&middot; Self-hosted infrastructure</li>
+
                 </ul>
               </div>
             </CardContent>
@@ -195,7 +197,7 @@ export default function AboutPage() {
                   <Button>Get in touch</Button>
                 </Link>
                 <a
-                  href="https://www.linkedin.com/in/brianflett/"
+                  href="https://www.linkedin.com/in/brianflett-2a43691/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
