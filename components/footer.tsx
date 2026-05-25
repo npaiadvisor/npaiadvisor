@@ -56,6 +56,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/tech-stack"
+                  className="text-muted-foreground hover:text-primary"
+                >
+                  Tech Stack
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/mas-ai"
                   className="text-muted-foreground hover:text-primary"
                 >
