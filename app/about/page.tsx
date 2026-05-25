@@ -63,6 +63,14 @@ export default function AboutPage() {
                     <li><strong className="text-foreground">Next.js</strong> &mdash; modern web applications</li>
                     <li><strong className="text-foreground">Vercel</strong> &mdash; application deployment</li>
                   </ul>
+                  <p className="mt-4 text-sm">
+                    <Link
+                      href="/tech-stack"
+                      className="text-ochre hover:underline"
+                    >
+                      See my full tech stack &rarr;
+                    </Link>
+                  </p>
                 </div>
                 <div>
                   <h3 className="mb-3 font-sans text-sm font-semibold uppercase tracking-wider text-primary">

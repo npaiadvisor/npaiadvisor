@@ -88,6 +88,11 @@ export default function Home() {
                 Projects
               </Button>
             </Link>
+            <Link href="/tech-stack">
+              <Button variant="ghost" size="sm">
+                Tech Stack
+              </Button>
+            </Link>
             <Link href="/about">
               <Button variant="ghost" size="sm">
                 About Brian
