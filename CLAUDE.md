@@ -15,9 +15,9 @@
 ## Project Overview
 
 **Three Related Directories**:
-1. `/home/brian/workspace/development/npaiadvisor` - Website (Next.js)
+1. `/home/brian/workspace/development/npaiadvisor/npaiadvisor` - Website (Next.js)
 2. `/home/brian/workspace/workflows/npaiadvisor-strategy` - Strategic docs
-3. `/home/brian/workspace/workflows/personal/npaiadvisor` - n8n workflows (ARCHIVED 2026-07; historical JSON only)
+3. n8n workflows - ARCHIVED 2026-07 (historical JSON only); retired with their `workflows/personal` repo to `/home/brian/obsolete/n8n-brian-workflows/npaiadvisor/` on 2026-10-11
 
 **GitHub Access** (web interface):
 ```
@@ -54,13 +54,13 @@ pnpm run build          # Production build
 ## Key Files
 
 **Strategy docs** (read before content changes):
-- `/workflows/npaiadvisor-strategy/docs/STRATEGY.md`
-- `/workflows/npaiadvisor-strategy/docs/COLLABORATION_MODEL.md`
-- `/workflows/npaiadvisor-strategy/docs/AI_ADOPTION_FRAMEWORK.md`
+- `/home/brian/workspace/workflows/npaiadvisor-strategy/docs/STRATEGY.md`
+- `/home/brian/workspace/workflows/npaiadvisor-strategy/docs/COLLABORATION_MODEL.md`
+- `/home/brian/workspace/workflows/npaiadvisor-strategy/docs/AI_ADOPTION_FRAMEWORK.md`
 
 **Website**:
-- `/development/npaiadvisor/README.md`
-- `/development/npaiadvisor/app/*/page.tsx`
+- `/home/brian/workspace/development/npaiadvisor/npaiadvisor/README.md`
+- `/home/brian/workspace/development/npaiadvisor/npaiadvisor/app/*/page.tsx`
 
 ---
 
@@ -76,11 +76,11 @@ pnpm run build          # Production build
 
 ## Session Lifecycle
 
-- **Start**: `/bootstrap` (loads Klaus context, checks pending handoffs)
+- **Start**: `/bootstrap` when you want the work landscape (reviews pending handoffs and priorities; not a context loader)
 - **End**: `/wrapup` (logs summary to Postgres, handles handoffs, checks git)
 
-This is a **public repo** — no internal infrastructure details, workflow IDs, or credentials here. Klaus capabilities are provided via the globally available `klaus-workflows`, `bootstrap`, and `wrapup` skills.
+This is a **public repo** — no internal infrastructure details, workflow IDs, or credentials here. Klaus capabilities are provided via the globally available `bootstrap` and `wrapup` skills.
 
 ---
 
-**Last Updated**: 2026-09-07
+**Last Updated**: 2026-10-11
